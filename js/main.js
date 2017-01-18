@@ -1,4 +1,3 @@
-document.getElementById("name").focus();
 var span=document.createElement("span");
 var span2=document.createElement("span");
 var span3=document.createElement("span");
@@ -26,7 +25,7 @@ function mostrarMensaje3()
 function mostrarMensaje4()
 {
     var cCantidad=document.getElementById("input-password");
-    span4.innerHTML="la contraseña no puede ser 123456";
+    span4.innerHTML="la contraseña no puede ser 123456,098754 ni password";
     cCantidad.parentNode.appendChild(span4);
 }
 function mostrarMensaje5()
@@ -37,7 +36,7 @@ function mostrarMensaje5()
 }
 
 
-function validateForm(evt){
+function validateForm(){
 	
     var name = document.getElementById("name").value;
     var lastName = document.getElementById("lastname").value;
@@ -82,16 +81,21 @@ function validateForm(evt){
         }
         else
             {
+                span4.style.display="block";
                 span3.style.display="none";
+                
             }
     
     if (inputPassword=="123456"||inputPassword=="098754"||inputPassword=="password")
         {
-            mostrarMensaje4();
+            span4.style.display="block";
+            mostrarMensaje4()
+            
         }
           else
             {
                 span4.style.display="none";
+                                
             }
 
     
